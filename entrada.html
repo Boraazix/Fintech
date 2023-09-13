@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <hr>
+        <h2>Russell's FinTech</h2>
+        <hr>
+    </header>
+    <main>
+        <h1>Simulador de Investimentos Financeiros</h1>
+        <fieldset style="margin-bottom: 1rem;">
+            <legend>Critérios de geração</legend>
+
+            <form method="get" action="./processar.php">
+                <label for="cliente">Aporte Inicial (R$)</label>
+                <input type="text" name="cliente" maxlength="200"
+                    value="Jeferson Rodrigues" required><br>
+
+                <label for="aporte_inicial">Aporte Inicial (R$)</label>
+                <input type="number" step="0.01" name="aporte_inicial" min="0" max="999999.99"
+                    value="500" required>
+                <label for="aporte_inicial">[até R$ 999.999,99]</label><br>
+
+                <label for="periodo">Período (meses)</label>
+                <input type="number" name="periodo" min="1" max="480" value="12" required>
+                <label for="periodo">[1 a 480]</label><br>
+
+                <label for="rendimento">Rendimento Mensal (%)</label>
+                <input type="number" step="0.01" name="rendimento" min="0" max="20"
+                    value="0.7" required>
+                <label for="rendimento">[até 20%]</label><br>
+
+                <label for="">Aporte Mensal (R$)</label>
+                <input type="number" step="0.01" name="aporte_mensal" min="0" max="999999.99"
+                    value="350" required>
+                <label for="aporte_mensal">[até R$ 999.999,99]</label><br>
+
+                <button type="submit">Calcular</button>
+            </form>
+        </fieldset>
+        <p id="back"><a href="./index.html">Página inicial</a></p>
+    </main>
+    <footer>
+        <hr>
+        <p>Russell Edward & Vitor Gabriel - &copy; 2023 - all rights reserved</p>
+        <hr>
+    </footer>
+</body>
+
+</html>
